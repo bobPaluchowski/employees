@@ -18,10 +18,12 @@ import java.time.LocalDateTime;
 public class Holiday {
     @Id
     private ObjectId id;
+    private String empEmail;
     private String startDate;
     private String endDate;
 
-    public Holiday(String startDate, String endDate) {
+    public Holiday(String empEmail, String startDate, String endDate) {
+        this.empEmail = empEmail;
         this.startDate = startDate;
         this.endDate = endDate;
     }

@@ -15,4 +15,6 @@ public interface EmployeeRepository extends MongoRepository<Employee, ObjectId> 
     // Change Service and Controller accordingly
 
     Optional<Employee> findEmployeeByEmpEmail(String empEmail);
+
+    void deleteByEmpEmail(String empEmail);
 }
