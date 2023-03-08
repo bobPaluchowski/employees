@@ -1,6 +1,5 @@
 package com.robert.employees;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,9 +37,9 @@ public class EmployeeController {
         return new ResponseEntity<Optional<Employee>>(employeeService.singleEmployee(empEmail), HttpStatus.OK);
     }
 
-    @PutMapping
-    public Employee updateEmployee(@RequestBody Employee employee) {
-        return employeeService.updateEmployee(employee);
-    }
+//    @PutMapping
+//    public Employee updateEmployee(@RequestBody Employee employee) {
+//        return employeeService.updateEmployee(employee);
+//    }
 
 }

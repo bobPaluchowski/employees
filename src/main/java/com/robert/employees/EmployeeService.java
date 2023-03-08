@@ -1,6 +1,5 @@
 package com.robert.employees;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,18 +27,18 @@ public class EmployeeService {
     }
 
     // Update employee
-    public Employee updateEmployee(Employee employee) {
-        // Get the existing employee from DB
-        Employee existingEmployee = employeeRepository.findEmployeeByEmpEmail(employee.getEmpEmail()).get();
-        // Update the existing employee
-        existingEmployee.setEmpName(employee.getEmpName());
-        existingEmployee.setEmpEmail(employee.getEmpEmail());
-        existingEmployee.setEmpPassword(employee.getEmpPassword());
-        existingEmployee.setEmpRole(employee.getEmpRole());
-        existingEmployee.setHolidayList(employee.getHolidayList());
-        existingEmployee.setSickdayList(employee.getSickdayList());
-        return employeeRepository.save(existingEmployee);
-    }
+//    public Employee updateEmployee(Employee employee) {
+//        // Get the existing employee from DB
+//        Employee existingEmployee = employeeRepository.findEmployeeByEmpEmail(employee.getEmpEmail()).get();
+//        // Update the existing employee
+//        existingEmployee.setEmpName(employee.getEmpName());
+//        existingEmployee.setEmpEmail(employee.getEmpEmail());
+//        existingEmployee.setEmpPassword(employee.getEmpPassword());
+//        existingEmployee.setEmpRole(employee.getEmpRole());
+//        existingEmployee.setHolidayList(employee.getHolidayList());
+//        existingEmployee.setSickdayList(employee.getSickdayList());
+//        return employeeRepository.save(existingEmployee);
+//    }
 
     // Delete employee
     public String deleteEmployee(String empEmail) {
